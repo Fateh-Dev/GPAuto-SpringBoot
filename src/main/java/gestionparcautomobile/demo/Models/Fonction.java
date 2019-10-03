@@ -1,0 +1,48 @@
+package gestionparcautomobile.demo.Models;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "Fonctions")
+public class Fonction {
+    @Id
+    private String id;
+    private String designationFr;
+    private String designationAr;
+
+    public Fonction() {
+    }
+
+    public Fonction(String id) {
+        this.id = id;
+    }
+
+    public Fonction(String designationFr, String designationAr) {
+        this.designationFr = designationFr;
+        this.designationAr = designationAr;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getDesignationFr() {
+        return designationFr;
+    }
+
+    public void setDesignationFr(String designationFr) {
+        this.designationFr = designationFr;
+    }
+
+    public String getDesignationAr() {
+        return designationAr;
+    }
+
+    public void setDesignationAr(String designationAr) {
+        this.designationAr = designationAr;
+    }
+}
